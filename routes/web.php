@@ -4,15 +4,62 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routes - MBRC
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
 */
 
+// Page d'accueil
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+// À propos
+Route::get('/apropos', function () {
+    return view('apropos');
+})->name('apropos');
+
+// La Plateforme
+Route::get('/plateforme', function () {
+    return view('plateforme');
+})->name('plateforme');
+
+// Domaines de Réflexion
+Route::get('/domaines', function () {
+    return view('domaines');
+})->name('domaines');
+
+// Espace Membres
+Route::get('/membres', function () {
+    return view('membres');
+})->name('membres');
+
+// Nous Rejoindre
+Route::get('/rejoindre', function () {
+    return view('rejoindre');
+})->name('rejoindre');
+
+// Contact
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+// Soutenir MBRC
+Route::get('/soutenir', function () {
+    return view('soutenir');
+})->name('soutenir');
+
+// Routes pour traitement des formulaires (à implémenter avec un Controller)
+Route::post('/contact', function () {
+    // Logique de traitement du formulaire
+    return redirect()->route('contact')->with('success', 'Votre message a été envoyé avec succès !');
+})->name('contact.submit');
+
+Route::post('/rejoindre', function () {
+    // Logique de traitement du formulaire
+    return redirect()->route('rejoindre')->with('success', 'Votre demande d\'adhésion a été envoyée avec succès !');
+})->name('rejoindre.submit');
+
+Route::post('/soutenir', function () {
+    // Logique de traitement du formulaire
+    return redirect()->route('soutenir')->with('success', 'Votre proposition a été envoyée avec succès !');
+})->name('soutenir.submit');

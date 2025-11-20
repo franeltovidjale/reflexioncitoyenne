@@ -1,0 +1,28 @@
+Pages:
+Accueil
+A propos
+La plateforme
+Domaine de réflexion
+Espace membre
+Nous rejoindre
+Contact
+soutenir
+
+--------------------------
+--------------------------
+
+Modifications:
+
+Polices et couelurs du site de base
+remplacer Pédagogie de 'page à propos' par formation
+Revoir les redirections avec IDs sur la page A propos
+Retirer la section Histoire de A propos
+modifier le titr 'Les visages derrière la MBRC' de 'a propos' en les filles et fils du Bénin derrière (Citoyens Béninois de tout horizon)
+Bouton dans les box dans la page 'soutenir'
+
+Remplacer le texte 'Ensemble, Construisons le Bénin de Demain' par 'Ensemble, Préparons les élites de Demain'
+Remplacer nous rejoindre par 'J'adhère'
+Bouton pour recevoir les dons (Version 2)
+
+
+Logo avec la bordure (à envoyer) [Avec et sans le texte à côté]
