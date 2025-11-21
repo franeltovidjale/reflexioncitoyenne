@@ -1025,14 +1025,14 @@ body {
 
 .manifeste-content {
   text-align: center;
-  max-width: 900px;
+  max-width: 90vw;
   margin: 0 auto;
 }
 
 .manifeste-grid {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); */
   gap: var(--space-xl);
   margin-top: var(--space-2xl);
 }
@@ -1075,7 +1075,7 @@ body {
 
 .valeurs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-lg); /* --space-lg = 2rem*/
 }
 
