@@ -109,7 +109,7 @@
 </section>
 
 <!-- Valeurs -->
-<section class="section section-light">
+<section class="section">
     <div class="container">
         <div class="section-header">
             <span class="section-badge">Nos Valeurs</span>
@@ -171,7 +171,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                     </svg>
                 </div>
-                <h3 class="valeur-title">Pédagogie</h3>
+                <h3 class="valeur-title">Formation</h3>
                 <p class="valeur-text">
                     Rendre accessible les concepts complexes sans les simplifier à l'excès.
                 </p>
@@ -193,7 +193,7 @@
 </section>
 
 <!-- Histoire -->
-<section class="section">
+{{-- <section class="section">
     <div class="container">
         <div class="histoire-layout">
             <div class="histoire-content">
@@ -258,14 +258,14 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <!-- Équipe Section -->
 <section class="section section-light">
     <div class="container">
         <div class="section-header">
             <span class="section-badge">Notre Équipe</span>
-            <h2 class="section-title">Les visages derrière la MBRC</h2>
+            <h2 class="section-title">Les filles et fils du Bénin derrière <br> (Citoyens Béninois de tout horizon)</h2>
             <p class="section-description">
                 Une équipe diverse et engagée, unie par la même passion pour le Bénin.
             </p>

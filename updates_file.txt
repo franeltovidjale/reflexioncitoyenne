@@ -13,11 +13,11 @@ soutenir
 
 Modifications:
 
-Polices et couelurs du site de base
-remplacer Pédagogie de 'page à propos' par formation
-Revoir les redirections avec IDs sur la page A propos
-Retirer la section Histoire de A propos
-modifier le titr 'Les visages derrière la MBRC' de 'a propos' en les filles et fils du Bénin derrière (Citoyens Béninois de tout horizon)
+Polices et couelurs du site de base => Done
+remplacer Pédagogie de 'page à propos' par formation => Done
+Revoir les redirections avec IDs sur la page A propos => Done
+Retirer la section Histoire de A propos => Done
+modifier le titre 'Les visages derrière la MBRC' de 'a propos' en les filles et fils du Bénin derrière (Citoyens Béninois de tout horizon) =>Done
 Bouton dans les box dans la page 'soutenir'
 
 Remplacer le texte 'Ensemble, Construisons le Bénin de Demain' par 'Ensemble, Préparons les élites de Demain'

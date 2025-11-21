@@ -63,7 +63,7 @@
                     <ul class="footer-links">
                         <li><a href="{{ route('rejoindre') }}">Nous Rejoindre</a></li>
                         <li><a href="{{ route('membres') }}">Espace Membres</a></li>
-                        <li><a href="{{ route('soutenir') }}">Soutenir MBRC</a></li>
+                        <li><a href="{{ route('soutenir') }}">Adhérer MBRC</a></li>
                         <li><a href="{{ route('contact') }}">Contact</a></li>
                     </ul>
                 </div>

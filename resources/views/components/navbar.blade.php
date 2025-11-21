@@ -39,7 +39,7 @@
                         <a href="{{ route('contact') }}" class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('soutenir') }}" class="nav-link {{ request()->routeIs('soutenir') ? 'active' : '' }}">Soutenir</a>
+                        <a href="{{ route('soutenir') }}" class="nav-link {{ request()->routeIs('soutenir') ? 'active' : '' }}">Adhérer</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('rejoindre') }}" class="btn btn-primary" style="white-space: nowrap;">
@@ -53,7 +53,7 @@
 
                 <!-- CTA Buttons -->
                 {{-- <div class="nav-actions">
-                    <a href="{{ route('soutenir') }}" class="btn btn-ghost">Soutenir</a>
+                    <a href="{{ route('soutenir') }}" class="btn btn-ghost">Adhérer</a>
                     <a href="{{ route('rejoindre') }}" class="btn btn-primary" style="white-space: nowrap;">
                         <span style="white-space: nowrap;">Nous Rejoindre</span>
                         <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">

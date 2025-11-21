@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Soutenir MBRC')
+@section('title', 'Adhérer MBRC')
 
 @section('content')
 
@@ -12,7 +12,7 @@
             <nav class="breadcrumb">
                 <a href="{{ route('home') }}">Accueil</a>
                 <span>/</span>
-                <span>Soutenir MBRC</span>
+                <span>Adhérer MBRC</span>
             </nav>
             <h1 class="page-title">Soutenez Notre Action</h1>
             <p class="page-description">
