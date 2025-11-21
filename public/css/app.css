@@ -286,7 +286,9 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--green-primary), var(--green-dark));
+
+  background: linear-gradient(135deg,  #2563eb, #008c3b);
+  /* background: linear-gradient(135deg, var(--green-primary), var(--green-dark)); */
   color: var(--white);
   box-shadow: 0 4px 12px rgba(0, 140, 59, 0.3);
 }
@@ -345,7 +347,8 @@ body {
 
 .btn-newsletter {
   padding: 0.75rem;
-  background: var(--green-primary);
+  /* background: var(--green-primary); */
+  background: linear-gradient(135deg,  #2563eb, #008c3b);
   color: var(--white);
   border: none;
   border-radius: var(--radius-md);

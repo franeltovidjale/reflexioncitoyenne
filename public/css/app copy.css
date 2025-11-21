@@ -1473,6 +1473,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* Cache le tagline sur mobile */
+  .brand-tagline {
+    display: none;
+  }
+
   .nav-menu {
     position: fixed;
     top: 0;
@@ -1481,10 +1486,13 @@ body {
     bottom: 0;
     background: var(--white);
     flex-direction: column;
-    padding: 100px var(--space-md) var(--space-xl);
+    padding: 70px var(--space-md) var(--space-xl);
     transform: translateX(-100%);
     transition: transform var(--transition-base);
     z-index: 999;
+    overflow-y: auto;
+    height: 100vh !important;
+    width: 80vw !important;
   }
 
   .nav-menu.active {
@@ -1494,12 +1502,42 @@ body {
   .nav-list {
     flex-direction: column;
     width: 100%;
+    gap: 0;
+  }
+
+  .nav-item {
+    margin: 5px;
+    /* padding: ; */
+    width: 100%;
   }
 
   .nav-link {
     width: 100%;
     padding: var(--space-md);
     font-size: 1.125rem;
+    border-radius: var(--radius-md);
+    text-align: left;
+    display: block;
+  }
+
+  /* Bouton "Nous Rejoindre" en mobile */
+  .nav-item:last-child .btn-primary {
+    width: 100%;
+    margin-top: var(--space-md);
+    justify-content: center;
+  }
+
+  /* Animation du bouton hamburger */
+  .mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
   }
 
   .nav-actions {
