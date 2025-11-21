@@ -24,7 +24,7 @@
                         <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('apropos') }}" class="nav-link {{ request()->routeIs('apropos') ? 'active' : '' }}">À propos</a>
+                        <a href="{{ route('apropos') }}" class="nav-link {{ request()->routeIs('apropos') ? 'active' : '' }}" style="white-space: nowrap;">À propos</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('plateforme') }}" class="nav-link {{ request()->routeIs('plateforme') ? 'active' : '' }}">Plateforme</a>
@@ -38,10 +38,21 @@
                     <li class="nav-item">
                         <a href="{{ route('contact') }}" class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route('soutenir') }}" class="nav-link {{ request()->routeIs('soutenir') ? 'active' : '' }}">Soutenir</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('rejoindre') }}" class="btn btn-primary" style="white-space: nowrap;">
+                            <span style="white-space: nowrap;">Nous Rejoindre</span>
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
 
                 <!-- CTA Buttons -->
-                <div class="nav-actions">
+                {{-- <div class="nav-actions">
                     <a href="{{ route('soutenir') }}" class="btn btn-ghost">Soutenir</a>
                     <a href="{{ route('rejoindre') }}" class="btn btn-primary" style="white-space: nowrap;">
                         <span style="white-space: nowrap;">Nous Rejoindre</span>
@@ -49,7 +60,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                         </svg>
                     </a>
-                </div>
+                </div> --}}
             </div>
 
             <!-- Mobile Menu Button -->

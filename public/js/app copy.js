@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', function() {
             navMenu.classList.toggle('active');
-            mobileMenuBtn.classList.toggle('active');
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
 
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('click', function(e) {
             if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
                 navMenu.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
                 document.body.style.overflow = '';
             }
         });
@@ -28,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
                 document.body.style.overflow = '';
             });
         });
