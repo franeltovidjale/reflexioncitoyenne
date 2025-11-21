@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
 
+    <link rel="shortcut icon" href="{{ asset('site_icon.ico') }}">
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 

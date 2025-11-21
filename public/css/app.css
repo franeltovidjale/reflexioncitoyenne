@@ -684,7 +684,7 @@ body {
 
 .domaines-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
   gap: var(--space-lg);
 }
 
@@ -1027,13 +1027,14 @@ body {
 
 .manifeste-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
   gap: var(--space-xl);
   margin-top: var(--space-2xl);
 }
 
 .manifeste-item {
-  text-align: left;
+  text-align: justify;
 }
 
 .manifeste-number {
@@ -1070,7 +1071,7 @@ body {
 
 .valeurs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
   gap: var(--space-lg); /* --space-lg = 2rem*/
 }
 

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // =====================================
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navMenu = document.getElementById('navMenu');
-    
+
     if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', function() {
             navMenu.classList.toggle('active');
@@ -35,19 +35,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navbar Scroll Effect
     // =====================================
     const navbar = document.getElementById('navbar');
-    
+
     if (navbar) {
         let lastScroll = 0;
-        
+
         window.addEventListener('scroll', function() {
             const currentScroll = window.pageYOffset;
-            
+
             if (currentScroll > 100) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
-            
+
             lastScroll = currentScroll;
         });
     }
@@ -58,14 +58,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-            
+
             if (href !== '#' && href !== '') {
                 e.preventDefault();
                 const target = document.querySelector(href);
-                
+
                 if (target) {
                     const offsetTop = target.offsetTop - 80;
-                    
+
                     window.scrollTo({
                         top: offsetTop,
                         behavior: 'smooth'
@@ -79,22 +79,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form Handling (Demo)
     // =====================================
     const forms = document.querySelectorAll('form');
-    
+
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Simulate form submission
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            
+
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'Envoi en cours...';
-            
+
             setTimeout(() => {
                 submitBtn.innerHTML = '✓ Envoyé !';
                 submitBtn.style.background = 'var(--green-primary)';
-                
+
                 setTimeout(() => {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animate elements on scroll
     const animateElements = document.querySelectorAll('.mission-card, .domaine-card, .testimonial-card, .content-card, .valeur-card, .team-card');
-    
+
     animateElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
@@ -136,12 +136,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Newsletter Form
     // =====================================
     const newsletterForm = document.querySelector('.newsletter-form');
-    
+
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const email = this.querySelector('input[type="email"]').value;
-            
+
             if (email) {
                 alert('Merci pour votre inscription ! Vous recevrez bientôt nos dernières actualités.');
                 this.reset();
@@ -153,21 +153,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Stats Counter Animation
     // =====================================
     const statValues = document.querySelectorAll('.stat-value');
-    
+
     function animateValue(element, start, end, duration) {
         if (element.textContent === '∞') return; // Skip infinity symbol
-        
+
         let startTimestamp = null;
         const step = (timestamp) => {
             if (!startTimestamp) startTimestamp = timestamp;
             const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            
+
             if (end.toString().includes('%')) {
                 element.textContent = Math.floor(progress * parseInt(end)) + '%';
             } else {
                 element.textContent = Math.floor(progress * end);
             }
-            
+
             if (progress < 1) {
                 window.requestAnimationFrame(step);
             }
@@ -180,12 +180,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 const value = entry.target.textContent;
                 const numValue = parseInt(value);
-                
+
                 if (!isNaN(numValue)) {
                     entry.target.textContent = '0';
                     animateValue(entry.target, 0, numValue, 2000);
                 }
-                
+
                 statsObserver.unobserve(entry.target);
             }
         });
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
         cursor: pointer;
         opacity: 0;
         visibility: hidden;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
         box-shadow: 0 4px 12px rgba(0, 140, 59, 0.3);
         z-index: 999;
         display: flex;
