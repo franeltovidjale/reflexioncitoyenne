@@ -26,24 +26,27 @@
     @include('components.navbar')$
 
 
-    <!-- Modal Manifeste -->
-    @include('components.manifeste-modal')
-
-    @if (session('success'))
-        <div
-            style="background: #10b981; color: white; padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
-            {{ session('success') }}
-        </div>
-    @endif
-
-    @if (session('error'))
-        <div
-            style="background: var(--red-primary); color: white; padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
-            {{ session('error') }}
-        </div>
-    @endif
 
     <main class="main-content">
+        <div class="container">
+
+        <!-- Modal Manifeste -->
+        @include('components.manifeste-modal')
+
+        @if (session('success'))
+            <div
+                style="background: #10b981; color: white; padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; margin-top: 1.5rem;">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if (session('error'))
+            <div
+                style="background: var(--red-primary); color: white; padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; margin-top: 1.5rem;">
+                {{ session('error') }}
+            </div>
+        @endif
+        </div>
         @yield('content')
     </main>
 

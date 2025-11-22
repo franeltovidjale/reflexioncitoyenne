@@ -1,6 +1,6 @@
-// resources/views/components/manifeste-modal.blade.php
+{{-- // resources/views/components/manifeste-modal.blade.php --}}
 
-<div id="manifesteModal" class="modal-overlay" style="display: none;">
+<div id="manifesteModal" class="modal-overlay" style="display: none; margin-top:15px">
     <div class="modal-container">
         <div class="modal-content">
             <button type="button" class="modal-close" onclick="closeManifesteModal()">
