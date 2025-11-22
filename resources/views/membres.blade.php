@@ -21,7 +21,7 @@
             </p>
         </div>
     </div>
-    
+
         <div class="mission-grid">
             <div class="mission-card">
                 <div class="mission-icon">
@@ -113,46 +113,8 @@
     </div>
 </section>
 
-<!-- Connexion -->
-<section class="section">
-    <div class="container">
-        <div style="max-width: 500px; margin: 0 auto;">
-            <div class="content-card">
-                <h3 class="content-title" style="text-align: center;">Accès Membre</h3>
-                <p class="content-text" style="text-align: center; margin-bottom: 2rem;">
-                    Connectez-vous pour accéder à votre espace personnel et aux fonctionnalités réservées aux membres.
-                </p>
-
-                <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
-                    @csrf
-                    <div>
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Email</label>
-                        <input type="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
-                    </div>
-
-                    <div>
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Mot de passe</label>
-                        <input type="password" name="password" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                        <span>Se connecter</span>
-                    </button>
-                </form>
-
-                <div style="margin-top: 2rem; text-align: center; padding-top: 2rem; border-top: 1px solid var(--gray-200);">
-                    <p style="color: var(--gray-600); margin-bottom: 1rem;">Pas encore membre ?</p>
-                    <a href="{{ route('rejoindre') }}" class="btn btn-outline">
-                        <span>Créer un compte</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- Avantages Membres -->
-<section class="section section-light">
+<section class="section">
     <div class="container">
         <div class="section-header">
             <span class="section-badge">Pourquoi devenir membre ?</span>

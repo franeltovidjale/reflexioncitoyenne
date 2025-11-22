@@ -72,7 +72,7 @@
                 <div class="footer-col">
                     <h4 class="footer-title">Restez informés</h4>
                     <p class="newsletter-text">Inscrivez-vous à notre newsletter pour recevoir nos dernières analyses et événements.</p>
-                    <form class="newsletter-form" action="#" method="POST">
+                    <form class="newsletter-form" action="{{ route('newsletter.store') }}" method="POST">
                         @csrf
                         <input type="email" name="email" placeholder="Votre email" required>
                         <button type="submit" class="btn-newsletter">

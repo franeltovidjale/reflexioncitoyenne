@@ -81,32 +81,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // =====================================
     // Form Handling (Demo)
     // =====================================
-    const forms = document.querySelectorAll('form');
+    // const forms = document.querySelectorAll('form');
 
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
+    // forms.forEach(form => {
+    //     form.addEventListener('submit', function(e) {
+    //         // e.preventDefault();
 
-            // Simulate form submission
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
+    //         // Simulate form submission
+    //         const submitBtn = form.querySelector('button[type="submit"]');
+    //         const originalText = submitBtn.innerHTML;
 
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = 'Envoi en cours...';
+    //         submitBtn.disabled = true;
+    //         submitBtn.innerHTML = 'Envoi en cours...';
 
-            setTimeout(() => {
-                submitBtn.innerHTML = '✓ Envoyé !';
-                submitBtn.style.background = 'var(--green-primary)';
+    //         setTimeout(() => {
+    //             submitBtn.innerHTML = '✓ Envoyé !';
+    //             submitBtn.style.background = 'var(--green-primary)';
 
-                setTimeout(() => {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.style.background = '';
-                    form.reset();
-                }, 2000);
-            }, 1500);
-        });
-    });
+    //             setTimeout(() => {
+    //                 submitBtn.disabled = false;
+    //                 submitBtn.innerHTML = originalText;
+    //                 submitBtn.style.background = '';
+    //                 form.reset();
+    //             }, 2000);
+    //         }, 1500);
+    //     });
+    // });
 
     // =====================================
     // Intersection Observer for Animations
@@ -140,17 +140,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // =====================================
     const newsletterForm = document.querySelector('.newsletter-form');
 
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
+    // if (newsletterForm) {
+    //     newsletterForm.addEventListener('submit', function(e) {
+    //         e.preventDefault();
+    //         const email = this.querySelector('input[type="email"]').value;
 
-            if (email) {
-                alert('Merci pour votre inscription ! Vous recevrez bientôt nos dernières actualités.');
-                this.reset();
-            }
-        });
-    }
+    //         if (email) {
+    //             alert('Merci pour votre inscription ! Vous recevrez bientôt nos dernières actualités.');
+    //             this.reset();
+    //         }
+    //     });
+    // }
 
     // =====================================
     // Stats Counter Animation
@@ -262,4 +262,86 @@ document.addEventListener('DOMContentLoaded', function() {
     // =====================================
     console.log('%c🇧🇯 MBRC - Maison Béninoise de Réflexion Citoyenne', 'font-size: 16px; font-weight: bold; color: #008C3B;');
     console.log('%cRéfléchir ensemble. Comprendre ensemble. Pour le Bénin.', 'font-size: 12px; color: #666;');
+
+
+});
+// public/js/app.js
+
+// ... votre code existant ...
+
+// Modal Manifeste
+function openManifesteModal() {
+    document.getElementById('manifesteModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeManifesteModal() {
+    document.getElementById('manifesteModal').style.display = 'none';
+    document.body.style.overflow = '';
+    document.getElementById('manifesteForm').reset();
+    document.getElementById('manifesteError').style.display = 'none';
+    document.getElementById('manifesteSuccess').style.display = 'none';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('manifesteModal');
+    const form = document.getElementById('manifesteForm');
+
+    if (!modal || !form) return;
+
+    // Fermer sur overlay click
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeManifesteModal();
+    });
+
+    // Fermer sur Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeManifesteModal();
+        }
+    });
+
+    // Soumission formulaire
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const buttonText = document.getElementById('manifesteButtonText');
+        const errorDiv = document.getElementById('manifesteError');
+        const successDiv = document.getElementById('manifesteSuccess');
+
+        errorDiv.style.display = 'none';
+        successDiv.style.display = 'none';
+        submitBtn.disabled = true;
+        buttonText.textContent = 'Envoi en cours...';
+
+        try {
+            const formData = new FormData(form);
+            const response = await fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                    'Accept': 'application/json',
+                },
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+                successDiv.textContent = data.message;
+                successDiv.style.display = 'block';
+                form.reset();
+                setTimeout(() => closeManifesteModal(), 3000);
+            } else {
+                throw new Error(data.message || 'Une erreur est survenue');
+            }
+        } catch (error) {
+            errorDiv.textContent = error.message || 'Erreur lors de l\'envoi. Veuillez réessayer.';
+            errorDiv.style.display = 'block';
+        } finally {
+            submitBtn.disabled = false;
+            buttonText.textContent = 'Recevoir le lien par email';
+        }
+    });
 });

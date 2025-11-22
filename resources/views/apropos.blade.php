@@ -6,7 +6,7 @@
 <!-- Page Hero -->
 <section class="section">
     <div class="container">
-        <div class="page-hero-content">
+        <div class="page-hero-content" style="margin-bottom: -80px !important">
             <nav class="breadcrumb">
                 <a href="{{ route('home') }}">Accueil</a>
                 <span>/</span>
@@ -69,19 +69,32 @@
 <section class="section section-dark">
     <div class="container">
         <div class="manifeste-content">
-            <a href="{{ asset('documents/LE MANIFESTE MBRC.pdf') }}"
+            {{-- <a href="{{ asset('documents/LE MANIFESTE MBRC.pdf') }}"
                 class="btn btn-primary"
                 download="MBRC-Manifeste.pdf"
                 style="margin-bottom: var(--space-lg);">
-                Télécharger le Manifeste Fondateur
+                Manifeste Fondateur
                 <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
                     </path>
                 </svg>
-            </a>
+            </a> --}}
 
-            <span class="section-badge light">Manifeste Fondateur</span>
+
+            <button type="button"
+                onclick="openManifesteModal()"
+                class="btn btn-primary"
+                style="margin-bottom: var(--space-lg);">
+                Manifeste Fondateur
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                    </path>
+                </svg>
+            </button>
+
+            {{-- <span class="section-badge light">Manifeste Fondateur</span> --}}
             <h2 class="section-title light">Sept principes qui nous guident</h2>
 
             <div class="manifeste-grid">
@@ -264,7 +277,7 @@
             <h2 class="section-title">Une initiative née d'un besoin</h2>
         </div>
 
-        <div style="max-width: 900px; margin: 0 auto;">
+        <div style="max-width: 900px; margin: 0 auto;text-align: justify;">
             <p class="content-text" style="font-size: 1.125rem; line-height: 1.8;">
                 La Maison Béninoise de Réflexion Citoyenne (MBRC) est née d'un moment de bascule dans la conscience collective béninoise. Au fil des années, un malaise profond s'est installé : le peuple ne se reconnaît plus réellement dans ses responsables politiques, ni dans les orientations du pouvoir exécutif.
             </p>

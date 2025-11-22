@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Page Hero -->
-<section class="section">
+<section class="section section-light">
     <div class="container">
         <div class="page-hero-content">
             <nav class="breadcrumb">
@@ -21,7 +21,7 @@
 </section>
 
 <!-- Introduction -->
-<section class="section section-light">
+{{-- <section class="section section-light">
     <div class="container">
         <div style="max-width: 900px; margin: 0 auto; text-align: center;">
             <p class="content-text" style="font-size: 1.125rem; line-height: 1.8;">
@@ -29,7 +29,7 @@
             </p>
         </div>
     </div>
-</section>
+</section> --}}
 
 <!-- Domaines Grid -->
 <section class="section">

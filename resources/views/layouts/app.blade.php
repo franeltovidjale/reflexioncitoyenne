@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <link rel="shortcut icon" href="{{ asset('site_icon.ico') }}">
     <!-- Styles -->
@@ -17,8 +21,27 @@
 
     @stack('styles')
 </head>
+
 <body>
-    @include('components.navbar')
+    @include('components.navbar')$
+
+
+    <!-- Modal Manifeste -->
+    @include('components.manifeste-modal')
+
+    @if (session('success'))
+        <div
+            style="background: #10b981; color: white; padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    @if (session('error'))
+        <div
+            style="background: var(--red-primary); color: white; padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+            {{ session('error') }}
+        </div>
+    @endif
 
     <main class="main-content">
         @yield('content')
@@ -28,6 +51,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/manifeste-modal.js') }}"></script>
     @stack('scripts')
 </body>
+
 </html>

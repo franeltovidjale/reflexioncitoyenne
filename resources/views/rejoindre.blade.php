@@ -103,78 +103,135 @@
 
         <div style="max-width: 800px; margin: 0 auto;">
             <div class="content-card">
-                <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <form action="{{ route('adhesion.store') }}" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
                     @csrf
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div>
-                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Nom <span style="color: var(--red-primary);">*</span></label>
-                            <input type="text" name="nom" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">
+                                Nom <span style="color: var(--red-primary);">*</span>
+                            </label>
+                            <input type="text" name="nom" value="{{ old('nom') }}" required
+                                style="width: 100%; padding: 0.75rem; border: 2px solid {{ $errors->has('nom') ? 'var(--red-primary)' : 'var(--gray-200)' }}; border-radius: var(--radius-md); font-size: 1rem;">
+                            @error('nom')
+                                <span style="color: var(--red-primary); font-size: 0.875rem; margin-top: 0.25rem; display: block;">{{ $message }}</span>
+                            @enderror
                         </div>
 
                         <div>
-                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Prénom <span style="color: var(--red-primary);">*</span></label>
-                            <input type="text" name="prenom" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">
+                                Prénom <span style="color: var(--red-primary);">*</span>
+                            </label>
+                            <input type="text" name="prenom" value="{{ old('prenom') }}" required
+                                style="width: 100%; padding: 0.75rem; border: 2px solid {{ $errors->has('prenom') ? 'var(--red-primary)' : 'var(--gray-200)' }}; border-radius: var(--radius-md); font-size: 1rem;">
+                            @error('prenom')
+                                <span style="color: var(--red-primary); font-size: 0.875rem; margin-top: 0.25rem; display: block;">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
 
                     <div>
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Email <span style="color: var(--red-primary);">*</span></label>
-                        <input type="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">
+                            Email <span style="color: var(--red-primary);">*</span>
+                        </label>
+                        <input type="email" name="email" value="{{ old('email') }}" required
+                            style="width: 100%; padding: 0.75rem; border: 2px solid {{ $errors->has('email') ? 'var(--red-primary)' : 'var(--gray-200)' }}; border-radius: var(--radius-md); font-size: 1rem;">
+                        @error('email')
+                            <span style="color: var(--red-primary); font-size: 0.875rem; margin-top: 0.25rem; display: block;">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div>
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Téléphone</label>
-                        <input type="tel" name="telephone" placeholder="+229 ..." style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">
+                            Téléphone
+                        </label>
+                        <input type="tel" name="telephone" value="{{ old('telephone') }}" placeholder="+229 ..."
+                            style="width: 100%; padding: 0.75rem; border: 2px solid {{ $errors->has('telephone') ? 'var(--red-primary)' : 'var(--gray-200)' }}; border-radius: var(--radius-md); font-size: 1rem;">
+                        @error('telephone')
+                            <span style="color: var(--red-primary); font-size: 0.875rem; margin-top: 0.25rem; display: block;">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div>
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Date de naissance <span style="color: var(--red-primary);">*</span></label>
-                        <input type="date" name="date" required placeholder="" style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">
+                            Date de naissance <span style="color: var(--red-primary);">*</span>
+                        </label>
+                        <input type="date" name="date_naissance" value="{{ old('date_naissance') }}" required
+                            style="width: 100%; padding: 0.75rem; border: 2px solid {{ $errors->has('date_naissance') ? 'var(--red-primary)' : 'var(--gray-200)' }}; border-radius: var(--radius-md); font-size: 1rem;">
+                        @error('date_naissance')
+                            <span style="color: var(--red-primary); font-size: 0.875rem; margin-top: 0.25rem; display: block;">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div>
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Ville / Pays <span style="color: var(--red-primary);">*</span></label>
-                        <input type="text" name="date" required placeholder="Ex: Cotonou, Bénin ou Paris, France" style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">
+                            Ville / Pays <span style="color: var(--red-primary);">*</span>
+                        </label>
+                        <input type="text" name="ville_pays" value="{{ old('ville_pays') }}" required placeholder="Ex: Cotonou, Bénin ou Paris, France"
+                            style="width: 100%; padding: 0.75rem; border: 2px solid {{ $errors->has('ville_pays') ? 'var(--red-primary)' : 'var(--gray-200)' }}; border-radius: var(--radius-md); font-size: 1rem;">
+                        @error('ville_pays')
+                            <span style="color: var(--red-primary); font-size: 0.875rem; margin-top: 0.25rem; display: block;">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div>
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Domaine d'activité / Profession</label>
-                        <select name="domaine_activite" style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem; background: white;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">
+                            Domaine d'activité / Profession
+                        </label>
+                        <select name="domaine_activite"
+                                style="width: 100%; padding: 0.75rem; border: 2px solid {{ $errors->has('domaine_activite') ? 'var(--red-primary)' : 'var(--gray-200)' }}; border-radius: var(--radius-md); font-size: 1rem; background: white;">
                             <option value="">Sélectionnez votre domaine</option>
-                            <option>Droit / Sciences juridiques</option>
-                            <option>Sciences politiques / Relations internationales</option>
-                            <option>Économie / Gestion / Management</option>
-                            <option>Informatique / Numérique / IA</option>
-                            <option>Ingénierie / Sciences appliquées</option>
-                            <option>Agriculture / Agroalimentaire</option>
-                            <option>Santé / Médecine</option>
-                            <option>Éducation / Enseignement</option>
-                            <option>Arts / Culture / Patrimoine</option>
-                            <option>Communication / Médias</option>
-                            <option>Entrepreneuriat</option>
-                            <option>Étudiant(e)</option>
-                            <option>Autre</option>
+                            <option {{ old('domaine_activite') == 'Droit / Sciences juridiques' ? 'selected' : '' }}>Droit / Sciences juridiques</option>
+                            <option {{ old('domaine_activite') == 'Sciences politiques / Relations internationales' ? 'selected' : '' }}>Sciences politiques / Relations internationales</option>
+                            <option {{ old('domaine_activite') == 'Économie / Gestion / Management' ? 'selected' : '' }}>Économie / Gestion / Management</option>
+                            <option {{ old('domaine_activite') == 'Informatique / Numérique / IA' ? 'selected' : '' }}>Informatique / Numérique / IA</option>
+                            <option {{ old('domaine_activite') == 'Ingénierie / Sciences appliquées' ? 'selected' : '' }}>Ingénierie / Sciences appliquées</option>
+                            <option {{ old('domaine_activite') == 'Agriculture / Agroalimentaire' ? 'selected' : '' }}>Agriculture / Agroalimentaire</option>
+                            <option {{ old('domaine_activite') == 'Santé / Médecine' ? 'selected' : '' }}>Santé / Médecine</option>
+                            <option {{ old('domaine_activite') == 'Éducation / Enseignement' ? 'selected' : '' }}>Éducation / Enseignement</option>
+                            <option {{ old('domaine_activite') == 'Arts / Culture / Patrimoine' ? 'selected' : '' }}>Arts / Culture / Patrimoine</option>
+                            <option {{ old('domaine_activite') == 'Communication / Médias' ? 'selected' : '' }}>Communication / Médias</option>
+                            <option {{ old('domaine_activite') == 'Entrepreneuriat' ? 'selected' : '' }}>Entrepreneuriat</option>
+                            <option {{ old('domaine_activite') == 'Étudiant(e)' ? 'selected' : '' }}>Étudiant(e)</option>
+                            <option {{ old('domaine_activite') == 'Autre' ? 'selected' : '' }}>Autre</option>
                         </select>
+                        @error('domaine_activite')
+                            <span style="color: var(--red-primary); font-size: 0.875rem; margin-top: 0.25rem; display: block;">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div>
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Domaines de réflexion qui vous intéressent</label>
-                        <textarea name="domaines_interet" rows="3" placeholder="Ex: Économie, Éducation, Culture..." style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem; resize: vertical;"></textarea>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">
+                            Domaines de réflexion qui vous intéressent
+                        </label>
+                        <textarea name="domaines_interet" rows="3" placeholder="Ex: Économie, Éducation, Culture..."
+                                style="width: 100%; padding: 0.75rem; border: 2px solid {{ $errors->has('domaines_interet') ? 'var(--red-primary)' : 'var(--gray-200)' }}; border-radius: var(--radius-md); font-size: 1rem; resize: vertical;">{{ old('domaines_interet') }}</textarea>
+                        @error('domaines_interet')
+                            <span style="color: var(--red-primary); font-size: 0.875rem; margin-top: 0.25rem; display: block;">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div>
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Pourquoi souhaitez-vous rejoindre la MBRC ?</label>
-                        <textarea name="motivation" rows="4" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem; resize: vertical;"></textarea>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">
+                            Pourquoi souhaitez-vous rejoindre la MBRC ?
+                        </label>
+                        <textarea name="motivation" rows="4" required
+                                style="width: 100%; padding: 0.75rem; border: 2px solid {{ $errors->has('motivation') ? 'var(--red-primary)' : 'var(--gray-200)' }}; border-radius: var(--radius-md); font-size: 1rem; resize: vertical;">{{ old('motivation') }}</textarea>
+                        @error('motivation')
+                            <span style="color: var(--red-primary); font-size: 0.875rem; margin-top: 0.25rem; display: block;">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div style="background: var(--gray-100); padding: 1rem; border-radius: var(--radius-md);">
                         <label style="display: flex; align-items: start; gap: 0.75rem; cursor: pointer;">
-                            <input type="checkbox" name="acceptation" required style="margin-top: 0.25rem;">
+                            <input type="checkbox" name="acceptation" value="1" {{ old('acceptation') ? 'checked' : '' }} required style="margin-top: 0.25rem;">
                             <span style="font-size: 0.9rem; color: var(--gray-700);">
                                 J'accepte les valeurs de la MBRC (rigueur, pluralisme, humanisme, bien commun) et m'engage à participer de manière constructive et respectueuse.
                             </span>
                         </label>
+                        @error('acceptation')
+                            <span style="color: var(--red-primary); font-size: 0.875rem; margin-top: 0.5rem; margin-left: 2rem; display: block;">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">

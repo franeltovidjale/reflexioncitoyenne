@@ -1072,6 +1072,11 @@ body {
 /* ===================================
    VALEURS
    =================================== */
+.plateforme-valeurs-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: var(--space-lg); /* --space-lg = 2rem*/
+}
 
 .valeurs-grid {
   display: grid;

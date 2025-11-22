@@ -25,4 +25,250 @@ Remplacer nous rejoindre par 'J'adhère'
 Bouton pour recevoir les dons (Version 2)
 
 
-Logo avec la bordure (à envoyer) [Avec et sans le texte à côté]
+Logo avec la bordure (à envoyer) [Avec et sans le texte à côté] => Done
+
+Envoie de mail avec lien de telechargement du document 'Manifest'
+Bouton de partage sur les réseaux sociaux
+
+
+NB: je souhaite gerer les formulaires de mmon site, je te donne la fonction  précise et les champs de chacune d'elle, tu me donneras les Model, migration et controller lié à chacune d'elle, ne fais pas d'erreur stp,
+Les visiteurs du sites n'ont pas besoin de se connecter, ce n'est d'ailleurs pas indispensable, je ne veux pas de systeme d'auth
+
+Formulaire de contact,
+
+    <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+        @csrf
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Nom <span style="color: var(--red-primary);">*</span></label>
+                <input type="text" name="nom" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+            </div>
+
+            <div>
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Prénom <span style="color: var(--red-primary);">*</span></label>
+                <input type="text" name="prenom" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+            </div>
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Email <span style="color: var(--red-primary);">*</span></label>
+            <input type="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Sujet <span style="color: var(--red-primary);">*</span></label>
+            <select name="sujet" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem; background: white;">
+                <option value="">Choisissez un sujet</option>
+                <option>Question générale</option>
+                <option>Demande d'information</option>
+                <option>Proposition de partenariat</option>
+                <option>Suggestion d'amélioration</option>
+                <option>Signalement d'un problème</option>
+                <option>Médias / Presse</option>
+                <option>Autre</option>
+            </select>
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Message <span style="color: var(--red-primary);">*</span></label>
+            <textarea name="message" rows="6" required placeholder="Décrivez votre demande en détail..." style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem; resize: vertical;"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+            <span>Envoyer le message</span>
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+            </svg>
+        </button>
+
+        <p style="text-align: center; font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+            Nous nous engageons à vous répondre dans les meilleurs délais.
+        </p>
+    </form>
+
+Formulaire de newsletter, prendre juste l'adresse mail et l'enregistrer pour des diffusion via mail plus tard
+
+    <form class="newsletter-form" action="#" method="POST">
+        @csrf
+        <input type="email" name="email" placeholder="Votre email" required>
+        <button type="submit" class="btn-newsletter">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+        </button>
+    </form>
+
+Formulaire d'adhésion
+
+    <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+        @csrf
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Nom <span style="color: var(--red-primary);">*</span></label>
+                <input type="text" name="nom" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+            </div>
+
+            <div>
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Prénom <span style="color: var(--red-primary);">*</span></label>
+                <input type="text" name="prenom" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+            </div>
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Email <span style="color: var(--red-primary);">*</span></label>
+            <input type="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Téléphone</label>
+            <input type="tel" name="telephone" placeholder="+229 ..." style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Date de naissance <span style="color: var(--red-primary);">*</span></label>
+            <input type="date" name="date" required placeholder="" style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Ville / Pays <span style="color: var(--red-primary);">*</span></label>
+            <input type="text" name="date" required placeholder="Ex: Cotonou, Bénin ou Paris, France" style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Domaine d'activité / Profession</label>
+            <select name="domaine_activite" style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem; background: white;">
+                <option value="">Sélectionnez votre domaine</option>
+                <option>Droit / Sciences juridiques</option>
+                <option>Sciences politiques / Relations internationales</option>
+                <option>Économie / Gestion / Management</option>
+                <option>Informatique / Numérique / IA</option>
+                <option>Ingénierie / Sciences appliquées</option>
+                <option>Agriculture / Agroalimentaire</option>
+                <option>Santé / Médecine</option>
+                <option>Éducation / Enseignement</option>
+                <option>Arts / Culture / Patrimoine</option>
+                <option>Communication / Médias</option>
+                <option>Entrepreneuriat</option>
+                <option>Étudiant(e)</option>
+                <option>Autre</option>
+            </select>
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Domaines de réflexion qui vous intéressent</label>
+            <textarea name="domaines_interet" rows="3" placeholder="Ex: Économie, Éducation, Culture..." style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem; resize: vertical;"></textarea>
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Pourquoi souhaitez-vous rejoindre la MBRC ?</label>
+            <textarea name="motivation" rows="4" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem; resize: vertical;"></textarea>
+        </div>
+
+        <div style="background: var(--gray-100); padding: 1rem; border-radius: var(--radius-md);">
+            <label style="display: flex; align-items: start; gap: 0.75rem; cursor: pointer;">
+                <input type="checkbox" name="acceptation" required style="margin-top: 0.25rem;">
+                <span style="font-size: 0.9rem; color: var(--gray-700);">
+                    J'accepte les valeurs de la MBRC (rigueur, pluralisme, humanisme, bien commun) et m'engage à participer de manière constructive et respectueuse.
+                </span>
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+            <span>Envoyer ma demande d'adhésion</span>
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+        </button>
+
+        <p style="text-align: center; font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+            Votre demande sera examinée dans les 48h. Vous recevrez un email de confirmation.
+        </p>
+    </form>
+
+Formulaire de proposition:
+
+    <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+        @csrf
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Type de structure <span style="color: var(--red-primary);">*</span></label>
+            <select name="type_structure" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem; background: white;">
+                <option value="">Sélectionnez</option>
+                <option>Particulier</option>
+                <option>Université / École</option>
+                <option>Centre Culturel</option>
+                <option>Association</option>
+                <option>Entreprise</option>
+                <option>Média</option>
+                <option>ONG</option>
+                <option>Autre</option>
+            </select>
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Nom de la structure / Particulier <span style="color: var(--red-primary);">*</span></label>
+            <input type="text" name="nom_structure" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Nom du contact <span style="color: var(--red-primary);">*</span></label>
+                <input type="text" name="nom_contact" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+            </div>
+
+            <div>
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Email <span style="color: var(--red-primary);">*</span></label>
+                <input type="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem;">
+            </div>
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Type de soutien envisagé <span style="color: var(--red-primary);">*</span></label>
+            <select name="type_soutien" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem; background: white;">
+                <option value="">Sélectionnez</option>
+                <option>Expertise / Conseil</option>
+                <option>Partenariat institutionnel</option>
+                <option>Contribution technique</option>
+                <option>Appui logistique</option>
+                <option>Bénévolat</option>
+                <option>Mise à disposition d'espaces</option>
+                <option>Autre</option>
+            </select>
+        </div>
+
+        <div>
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">Décrivez votre proposition <span style="color: var(--red-primary);">*</span></label>
+            <textarea name="description" rows="6" required placeholder="Expliquez en détail comment vous souhaitez soutenir la MBRC..." style="width: 100%; padding: 0.75rem; border: 2px solid var(--gray-200); border-radius: var(--radius-md); font-size: 1rem; resize: vertical;"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+            <span>Envoyer ma proposition</span>
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+            </svg>
+        </button>
+
+        <p style="text-align: center; font-size: 0.875rem; color: var(--gray-600); margin: 0;">
+            Nous examinerons votre proposition et vous recontacterons rapidement.
+        </p>
+    </form>
+
+Formulaire de telechargement du manifeste[qui nexiste pas encore] (lors du clique du bouton de telechargement du manifeste, un modal s'affiche pour des information basiques avant l'envoie du mail qui contiendra un message et le lien de telechargement)
+
+
+dis moi sit'as copris et attends mon ok avant de commencer
+
+
+
+// routes/web.php
+
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\AdhesionController;
+use App\Http\Controllers\PropositionController;
+use App\Http\Controllers\ManifesteDownloadController;

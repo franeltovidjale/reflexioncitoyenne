@@ -124,7 +124,7 @@
             <h2 class="section-title">Qui Peut Devenir Partenaire ?</h2>
         </div>
 
-        <div class="valeurs-grid">
+        <div class="plateforme-valeurs-grid">
             <div class="valeur-card">
                 <div class="valeur-icon">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -201,7 +201,7 @@
 
         <div style="max-width: 700px; margin: 0 auto;">
             <div class="content-card">
-                <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <form action="{{ route('proposition.store') }}" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
                     @csrf
 
                     <div>

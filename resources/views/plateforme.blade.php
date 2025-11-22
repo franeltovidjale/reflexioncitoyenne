@@ -212,20 +212,20 @@
         <div style="margin-top: var(--space-2xl); max-width: 800px; margin-left: auto; margin-right: auto;">
             <div class="content-card" style="background: rgba(0, 140, 59, 0.05); border: 2px solid var(--green-primary);">
                 <h3 class="content-title" style="text-align: center; color: var(--green-primary);">Finalité des Ateliers et Tables Rondes</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-md); margin-top: var(--space-md);">
-                    <div style="text-align: center;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-md); margin-top: var(--space-md);">
+                    <div style="text-align: center; margin-bottom: 35px;">
                         <strong style="color: var(--gray-900);">✓ Apprendre en groupe</strong>
                         <p style="font-size: 0.9375rem; color: var(--gray-600); margin-top: 0.5rem;">Pédagogie claire et participative</p>
                     </div>
-                    <div style="text-align: center;">
+                    <div style="text-align: center; margin-bottom: 35px;">
                         <strong style="color: var(--gray-900);">✓ Confronter sans conflit</strong>
                         <p style="font-size: 0.9375rem; color: var(--gray-600); margin-top: 0.5rem;">Transformer le désaccord en richesse</p>
                     </div>
-                    <div style="text-align: center;">
+                    <div style="text-align: center; margin-bottom: 35px;">
                         <strong style="color: var(--gray-900);">✓ Valoriser la diversité</strong>
                         <p style="font-size: 0.9375rem; color: var(--gray-600); margin-top: 0.5rem;">Chaque expérience compte</p>
                     </div>
-                    <div style="text-align: center;">
+                    <div style="text-align: center; margin-bottom: 35px;">
                         <strong style="color: var(--gray-900);">✓ Produire des propositions</strong>
                         <p style="font-size: 0.9375rem; color: var(--gray-600); margin-top: 0.5rem;">Analyses et orientations structurées</p>
                     </div>
@@ -246,7 +246,7 @@
             </p>
         </div>
 
-        <div class="valeurs-grid">
+        <div class="plateforme-valeurs-grid">
             <div class="valeur-card">
                 <div class="valeur-icon">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -330,7 +330,7 @@
             <h2 class="section-title">Séminaires annuels & Universités d'été</h2>
         </div>
 
-        <div class="content-grid">
+        <div class="content-grid" style="margin-bottom: 50px">
             <div class="content-card">
                 <div class="content-icon">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">

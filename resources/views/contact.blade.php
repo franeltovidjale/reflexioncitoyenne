@@ -20,7 +20,7 @@
             </p>
         </div>
     </div>
-    
+
         <div class="content-grid">
             <div class="content-card">
                 <div class="content-icon">
@@ -82,7 +82,7 @@
 
         <div style="max-width: 700px; margin: 0 auto;">
             <div class="content-card">
-                <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <form action="{{ route('contact.store') }}" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
                     @csrf
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
