@@ -108,7 +108,7 @@
         "jeunesse",
         "diaspora béninoise",
         "développement du Bénin",
-        "think tank citoyen",
+        "MBRC",
         "participation citoyenne",
         "analyse politique"
       ],

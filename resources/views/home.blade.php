@@ -105,7 +105,7 @@
                     Dans le pays, comme au sein de la <strong>diaspora béninoise</strong>, beaucoup expriment une gêne, une tristesse, parfois un découragement. Non pas par hostilité ou par conflit, mais parce qu'ils ont le sentiment que la vie publique s'éloigne peu à peu de la voix des citoyens.
                 </p>
                 <p class="content-text" style="font-size: 1.125rem; line-height: 1.8; font-weight: 600; color: var(--gray-900);">
-                    C'est précisément dans ce besoin de clarté, de dialogue et de sérénité que s'inscrit la <strong>Maison Béninoise de Réflexion Citoyenne (MBRC)</strong> — un <strong>think tank citoyen</strong> indépendant dédié à la compréhension des enjeux publics.
+                    C'est précisément dans ce besoin de clarté, de dialogue et de sérénité que s'inscrit la <strong>Maison Béninoise de Réflexion Citoyenne (MBRC)</strong> — un <strong>MBRC</strong> indépendant dédié à la compréhension des enjeux publics.
                 </p>
             </div>
         </div>

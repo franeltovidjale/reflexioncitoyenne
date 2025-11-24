@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 {{-- SEO Meta Tags --}}
-@section('title', 'À Propos de la MBRC | Histoire, Mission et Valeurs - Think Tank Citoyen Bénin')
+@section('title', 'À Propos de la MBRC | Histoire, Mission et Valeurs - MBRC Bénin')
 
-@section('meta_description', 'Découvrez la Maison Béninoise de Réflexion Citoyenne : histoire, mission, vision et valeurs du think tank citoyen indépendant pour le développement et la participation citoyenne au Bénin.')
+@section('meta_description', 'Découvrez la Maison Béninoise de Réflexion Citoyenne : histoire, mission, vision et valeurs du MBRC indépendant pour le développement et la participation citoyenne au Bénin.')
 
 @section('meta_keywords', 'à propos mbrc, histoire mbrc, mission citoyenne bénin, think tank béninois, valeurs patriotisme, vision citoyenne, maison béninoise réflexion, plateforme indépendante bénin')
 
 @section('canonical', route('apropos'))
 
-@section('og_title', 'À Propos de la MBRC | Think Tank Citoyen Béninois')
+@section('og_title', 'À Propos de la MBRC | MBRC Béninois')
 @section('og_description', 'Découvrez l\'histoire et la mission de la Maison Béninoise de Réflexion Citoyenne, think tank indépendant pour la participation citoyenne au Bénin.')
 @section('og_image', asset('images/og-apropos.jpg'))
 
@@ -88,7 +88,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
                     </svg>
                 </div>
-                <h2 class="content-title" itemprop="name">Notre <strong>Mission</strong> de <strong>Think Tank Citoyen</strong></h2>
+                <h2 class="content-title" itemprop="name">Notre <strong>Mission</strong> de <strong>MBRC</strong></h2>
                 <p class="content-text" itemprop="description">
                     La <strong>Maison Béninoise de Réflexion Citoyenne</strong> (MBRC) poursuit une <strong>mission</strong> profonde et structurante : réarmer intellectuellement le citoyen béninois, renforcer son autonomie de pensée et bâtir un espace durable où la compréhension collective guide l'avenir du Bénin.
                 </p>
@@ -121,7 +121,7 @@
                 </svg>
             </button>
 
-            <h2 class="section-title light" itemprop="name">Sept principes qui guident notre <strong>think tank citoyen</strong></h2>
+            <h2 class="section-title light" itemprop="name">Sept principes qui guident notre <strong>MBRC</strong></h2>
 
             <div class="manifeste-grid">
                 <article class="manifeste-item" itemprop="hasPart" itemscope itemtype="https://schema.org/CreativeWork">
@@ -308,7 +308,7 @@
     <div class="container">
         <div class="section-header">
             <span class="section-badge">Notre Histoire</span>
-            <h2 class="section-title" itemprop="headline">Une initiative de <strong>think tank citoyen</strong> née d'un besoin</h2>
+            <h2 class="section-title" itemprop="headline">Une initiative de <strong>MBRC</strong> née d'un besoin</h2>
         </div>
 
         <div style="max-width: 900px; margin: 0 auto;text-align: justify;" itemprop="articleBody">
