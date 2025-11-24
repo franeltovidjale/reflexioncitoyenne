@@ -16,7 +16,7 @@ class AdhesionController extends Controller
             'nom' => 'required|string|max:255',
             'prenom' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'telephone_full' => 'nullable|string|max:20', // ← Changé de 'telephone' à 'telephone_full'
+            'telephone' => 'nullable|string|max:20',
             'date_naissance' => 'required|date',
             'ville_pays' => 'required|string|max:255',
             'domaine_activite' => 'nullable|string|max:255',
@@ -24,11 +24,6 @@ class AdhesionController extends Controller
             'motivation' => 'required|string',
             'acceptation' => 'required|accepted',
         ]);
-
-        // Renommer telephone_full en telephone pour la base de données
-        $validated['telephone'] = $validated['telephone_full'] ?? null;
-        unset($validated['telephone_full']);
-
         $adhesion = Adhesion::create($validated);
 
         // Email à l'admin
@@ -36,7 +31,6 @@ class AdhesionController extends Controller
 
         // Email de confirmation à l'utilisateur
         Mail::to($adhesion->email)->send(new AdhesionConfirmation($adhesion));
-
         return back()->with('success', 'Votre demande d\'adhésion a été envoyée avec succès !');
     }
 }

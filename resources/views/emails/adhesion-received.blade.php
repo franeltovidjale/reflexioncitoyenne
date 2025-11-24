@@ -1,4 +1,3 @@
-// resources/views/emails/adhesion-received.blade.php
 
 <!DOCTYPE html>
 <html>

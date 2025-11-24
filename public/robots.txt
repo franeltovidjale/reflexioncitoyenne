@@ -1,2 +1,58 @@
+# robots.txt pour Réflexion Citoyenne (reflexioncitoyenne.com)
+# Optimisé pour le référencement SEO
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://www.reflexioncitoyenne.com/sitemap.xml
+
+# Pages à ne pas indexer
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*?
+Disallow: /recherche?
+
+# Fichiers à ne pas indexer
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+
+# Dossiers techniques
+Disallow: /vendor/
+Disallow: /storage/
+
+# Crawl-delay (optionnel, pour éviter la surcharge)
+# Crawl-delay: 1
+
+# Règles spécifiques pour certains bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Bloquer les mauvais bots (spam, scraping)
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

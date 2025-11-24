@@ -1,4 +1,3 @@
-// resources/views/emails/contact-confirmation.blade.php
 
 <!DOCTYPE html>
 <html>

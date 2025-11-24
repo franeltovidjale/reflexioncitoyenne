@@ -1471,21 +1471,13 @@ body {
   .container {
     max-width: 1400px;
   }
-/* .brand-tagline{
-display: none;
-} */
 }
 
 /* Desktop (1024px - 1439px) - Déjà bien géré par le CSS de base */
 
-
-
 /* Tablet & Small Desktop (768px - 1023px) */
 @media (max-width: 1024px) {
   /* Réduire les paddings */
-.brand-tagline{
-display: none;
-}
   .section {
     padding: var(--space-2xl) 0;
   }
@@ -1883,8 +1875,6 @@ display: none;
     padding: 60px var(--space-md) var(--space-md);
   }
 }
-
-
 
 /* Print styles */
 @media print {

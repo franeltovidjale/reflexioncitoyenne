@@ -1,4 +1,3 @@
-// resources/views/emails/newsletter-welcome.blade.php
 
 <!DOCTYPE html>
 <html>
@@ -39,7 +38,7 @@
 
         <div class="footer">
             <p>MBRC - Maison Béninoise de Réflexion Citoyenne</p>
-            <p>Pour vous désinscrire, contactez-nous à contact@mbrc-benin.org</p>
+            <p>Pour vous désinscrire, contactez-nous à contact@reflexioncitoyenne.com</p>
         </div>
     </div>
 </body>

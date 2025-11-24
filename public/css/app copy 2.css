@@ -1461,118 +1461,31 @@ body {
   color: var(--white);
 }
 
-
 /* ===================================
    RESPONSIVE
    =================================== */
 
-/* Desktop Large (1440px+) */
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1400px;
-  }
-/* .brand-tagline{
-display: none;
-} */
-}
-
-/* Desktop (1024px - 1439px) - Déjà bien géré par le CSS de base */
-
-
-
-/* Tablet & Small Desktop (768px - 1023px) */
 @media (max-width: 1024px) {
-  /* Réduire les paddings */
-.brand-tagline{
-display: none;
-}
-  .section {
-    padding: var(--space-2xl) 0;
-  }
-
-  /* Hero */
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  /* Grids en 2 colonnes */
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .mission-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .domaines-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .content-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .valeurs-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .plateforme-valeurs-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Histoire */
   .histoire-layout {
     grid-template-columns: 1fr;
-    gap: var(--space-xl);
   }
 
-  /* CTA */
   .cta-box {
     flex-direction: column;
     text-align: center;
-    gap: var(--space-lg);
-  }
-
-  .cta-actions {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* Manifeste */
-  .manifeste-grid {
-    grid-template-columns: 1fr;
   }
 }
 
-/* Mobile & Tablet (max-width: 768px) */
 @media (max-width: 768px) {
-  /* Container */
-  .container {
-    padding: 0 var(--space-sm);
-  }
-
-  /* Navbar */
-  .navbar-content {
-    padding: var(--space-sm) 0;
-  }
-
+  /* Cache le tagline sur mobile */
   .brand-tagline {
     display: none;
   }
 
-  .brand-name {
-    font-size: 1.25rem;
-  }
-
-  /* Menu mobile */
   .nav-menu {
     position: fixed;
     top: 0;
@@ -1588,7 +1501,6 @@ display: none;
     overflow-y: auto;
     height: 100vh !important;
     width: 80vw !important;
-    box-shadow: var(--shadow-2xl);
   }
 
   .nav-menu.active {
@@ -1602,7 +1514,8 @@ display: none;
   }
 
   .nav-item {
-    margin: 5px 0;
+    margin: 5px;
+    /* padding: ; */
     width: 100%;
   }
 
@@ -1615,17 +1528,14 @@ display: none;
     display: block;
   }
 
+  /* Bouton "Nous Rejoindre" en mobile */
   .nav-item:last-child .btn-primary {
     width: 100%;
     margin-top: var(--space-md);
     justify-content: center;
   }
 
-  .mobile-menu-btn {
-    display: flex;
-    z-index: 1001;
-  }
-
+  /* Animation du bouton hamburger */
   .mobile-menu-btn.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
@@ -1641,41 +1551,19 @@ display: none;
   .nav-actions {
     flex-direction: column;
     width: 100%;
-    gap: var(--space-sm);
   }
 
   .nav-actions .btn {
     width: 100%;
   }
 
-  /* Hero */
-  .hero {
-    min-height: 90vh;
-    padding-top: 80px;
-    padding-bottom: var(--space-2xl);
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
+  .mobile-menu-btn {
+    display: flex;
+    z-index: 1001;
   }
 
   .hero-stats {
     flex-direction: column;
-    gap: var(--space-md);
-    padding: var(--space-md);
   }
 
   .stat-divider {
@@ -1683,154 +1571,25 @@ display: none;
     height: 1px;
   }
 
-  .scroll-indicator {
-    display: none;
-  }
-
-  /* Sections */
-  .section {
-    padding: var(--space-xl) 0;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .section-description {
-    font-size: 1rem;
-  }
-
-  .page-title {
-    font-size: 2rem;
-  }
-
-  .page-description {
-    font-size: 1rem;
-  }
-
-  /* Grids en 1 colonne */
-  .mission-grid,
-  .domaines-grid,
-  .content-grid,
-  .team-grid,
-  .testimonials-grid,
-  .manifeste-grid {
+  .content-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
-
-  .valeurs-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
-  }
-
-  .plateforme-valeurs-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
-
-  /* Cards */
-  .mission-card,
-  .domaine-card,
-  .content-card,
-  .valeur-card,
-  .testimonial-card,
-  .team-card {
-    padding: var(--space-md);
-  }
-
-  /* CTA */
-  .cta-box {
-    padding: var(--space-xl) var(--space-md);
-  }
-
-  .cta-title {
-    font-size: 1.75rem;
-  }
-
-  .cta-description {
-    font-size: 1rem;
-  }
-
-  .cta-actions {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .cta-actions .btn {
-    width: 100%;
-  }
-
-  /* Footer */
-  .footer {
-    padding: var(--space-xl) 0 var(--space-md);
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-xl);
   }
 
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
-    gap: var(--space-md);
   }
-
-  .footer-legal {
-    flex-direction: column;
-    gap: var(--space-sm);
-  }
-
-  /* Timeline */
-  .histoire-timeline {
-    padding-left: var(--space-md);
-  }
-
-  .timeline-dot {
-    left: calc(-1 * var(--space-md) - 6px);
-  }
-
-/* Dans @media (max-width: 768px) */
-.content-card > div[style*="display: flex"] {
-  flex-direction: column !important;
-  align-items: center !important;
 }
 
-.content-card .domaine-icon {
-  margin: 0 auto var(--space-md) !important;
-}
-
-/* Justifier le texte des paragraphes */
-.content-card .content-text,
-.content-card p {
-  text-align: justify !important;
-}
-
-/* Garder le titre centré */
-.content-card .content-title {
-  text-align: center !important;
-}
-
-
-}
-
-/* Mobile Small (max-width: 480px) */
-@media (max-width: 480px) {
-  /* Typography plus petite */
-  .hero-title {
-    font-size: 1.75rem;
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 80px;
   }
 
-  .section-title {
-    font-size: 1.75rem;
-  }
-
-  .page-title {
-    font-size: 1.75rem;
-  }
-
-  /* Boutons en pleine largeur */
   .hero-actions {
     flex-direction: column;
     width: 100%;
@@ -1840,69 +1599,7 @@ display: none;
     width: 100%;
   }
 
-  /* Stats plus compacts */
-  .stat-value {
-    font-size: 1.75rem;
-  }
-
-  .stat-label {
-    font-size: 0.8125rem;
-  }
-
-  /* Valeurs en 1 colonne sur très petit écran */
-  .valeurs-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Cards plus compactes */
-  .mission-card,
-  .domaine-card,
-  .content-card {
-    padding: var(--space-sm) var(--space-md);
-  }
-
-  /* CTA */
-  .cta-title {
-    font-size: 1.5rem;
-  }
-
-  .cta-description {
-    font-size: 0.9375rem;
-  }
-}
-
-/* Landscape mobile (orientation paysage) */
-@media (max-height: 600px) and (orientation: landscape) {
-  .hero {
-    min-height: auto;
-    padding-top: 100px;
-    padding-bottom: var(--space-xl);
-  }
-
-  .nav-menu {
-    padding: 60px var(--space-md) var(--space-md);
-  }
-}
-
-
-
-/* Print styles */
-@media print {
-  .navbar,
-  .mobile-menu-btn,
-  .hero-actions,
-  .cta-section,
-  .footer {
-    display: none;
-  }
-
-  .hero {
-    min-height: auto;
-    padding-top: var(--space-md);
-  }
-
-  body {
-    background: white;
-    color: black;
+  .section {
+    padding: var(--space-2xl) 0;
   }
 }

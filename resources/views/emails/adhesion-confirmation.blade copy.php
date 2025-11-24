@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,19 +15,17 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Proposition bien reçue !</h1>
+            <h1>Demande d'adhésion reçue !</h1>
         </div>
 
         <div class="content">
-            <p>Bonjour {{ $proposition->nom_contact }},</p>
+            <p>Bonjour {{ $adhesion->prenom }} {{ $adhesion->nom }},</p>
 
-            <p>Nous avons bien reçu votre proposition de soutien pour la MBRC au nom de <strong>{{ $proposition->nom_structure }}</strong>.</p>
+            <p>Nous avons bien reçu votre demande d'adhésion à la Maison Béninoise de Réflexion Citoyenne.</p>
 
-            <p><strong>Type de soutien :</strong> {{ $proposition->type_soutien }}</p>
+            <p>Notre équipe va examiner votre candidature dans les <strong>48 heures</strong> et vous tiendra informé(e) de la suite.</p>
 
-            <p>Notre équipe va examiner votre proposition avec attention et vous recontactera rapidement pour discuter des modalités de collaboration.</p>
-
-            <p>Nous vous remercions sincèrement pour votre intérêt et votre soutien à la réflexion citoyenne au Bénin.</p>
+            <p>Nous vous remercions pour votre intérêt et votre engagement envers le Bénin.</p>
 
             <p style="margin-top: 30px;">Cordialement,<br><strong>L'équipe MBRC</strong></p>
         </div>

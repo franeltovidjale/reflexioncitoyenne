@@ -5,15 +5,13 @@
             <a href="{{ route('home') }}" class="brand">
                 <div class="brand-logo">
                     <div class="flag-container">
-                        {{-- <span class="flag-stripe green"></span>
-                        <span class="flag-stripe yellow"></span>
-                        <span class="flag-stripe red"></span> --}}
+
                         <img src="{{ asset('images/logo.jpeg') }}" alt="" width="50">
                     </div>
                 </div>
                 <div class="brand-text">
                     <span class="brand-name">MBRC</span>
-                    <span class="brand-tagline">Maison Béninoise de Réflexion Citoyenne</span>
+                    <span class="brand-tagline">Maison Béninoise de <br> Réflexion Citoyenne</span>
                 </div>
             </a>
 
@@ -51,16 +49,7 @@
                     </li>
                 </ul>
 
-                <!-- CTA Buttons -->
-                {{-- <div class="nav-actions">
-                    <a href="{{ route('soutenir') }}" class="btn btn-ghost">Adhérer</a>
-                    <a href="{{ route('rejoindre') }}" class="btn btn-primary" style="white-space: nowrap;">
-                        <span style="white-space: nowrap;">Nous Rejoindre</span>
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                        </svg>
-                    </a>
-                </div> --}}
+
             </div>
 
             <!-- Mobile Menu Button -->

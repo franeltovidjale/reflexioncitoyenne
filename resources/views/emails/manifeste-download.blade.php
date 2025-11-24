@@ -1,4 +1,3 @@
-// resources/views/emails/manifeste-download.blade.php
 
 <!DOCTYPE html>
 <html>

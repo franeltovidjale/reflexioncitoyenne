@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ManifesteDownloadController;
-use App\Http\Controllers\PropositionController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\AdhesionController;
 use App\Http\Controllers\NewsletterController;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PropositionController;
+use App\Http\Controllers\ManifesteDownloadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,3 +76,6 @@ Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsle
 Route::post('/adhesion', [AdhesionController::class, 'store'])->name('adhesion.store');
 Route::post('/proposition', [PropositionController::class, 'store'])->name('proposition.store');
 Route::post('/manifeste-download', [ManifesteDownloadController::class, 'store'])->name('manifeste.download');
+
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+

@@ -1,4 +1,3 @@
-// resources/views/emails/proposition-received.blade.php
 
 <!DOCTYPE html>
 <html>
