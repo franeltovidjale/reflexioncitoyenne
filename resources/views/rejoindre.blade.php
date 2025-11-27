@@ -275,7 +275,8 @@
                     </button>
 
                     <p style="text-align: center; font-size: 0.875rem; color: var(--gray-600); margin: 0;">
-                        Votre demande d'<strong>adhésion</strong> sera examinée dans les 48h. Vous recevrez un email de confirmation.
+                        {{-- Votre demande d'<strong>adhésion</strong> sera examinée dans les 48h. Vous recevrez un email de confirmation. --}}
+Vous recevrez un e-mail de confirmation. Si ce n’est pas le cas, veuillez vérifier vos <strong>spams</strong>.
                     </p>
                 </form>
             </div>
