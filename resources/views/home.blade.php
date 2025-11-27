@@ -38,7 +38,7 @@
             {{-- H1 principal avec mots-clés --}}
             <h1 class="hero-title" itemprop="headline">
                 Réfléchir ensemble. Comprendre ensemble. Agir ensemble.
-Pour reconstruire un <span class="gradient-text">patriotisme fort</span><br>
+Pour reconstruire un <span class="gradient-text">patriotisme fort</span>
                 et rendre au peuple béninois sa voix souveraine.
             </h1>
 
