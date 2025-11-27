@@ -175,10 +175,10 @@
 
                     <div>
                         <label for="telephone" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--gray-700);">
-                            Téléphone
+                            Téléphone <span style="color: var(--red-primary);">*</span>
                         </label>
                         <input type="tel" id="telephone" name="telephone" value="{{ old('telephone') }}"
-                            style="width: 100%; padding: 0.75rem; border: 2px solid {{ $errors->has('telephone') ? 'var(--red-primary)' : 'var(--gray-200)' }}; border-radius: var(--radius-md); font-size: 1rem;">
+                            style="width: 100%; padding: 0.75rem; border: 2px solid {{ $errors->has('telephone') ? 'var(--red-primary)' : 'var(--gray-200)' }}; border-radius: var(--radius-md); font-size: 1rem;" required>
                         <input type="hidden" name="telephone_full" id="telephone_full">
                         @error('telephone')
                             <span style="color: var(--red-primary); font-size: 0.875rem; margin-top: 0.25rem; display: block;">{{ $message }}</span>

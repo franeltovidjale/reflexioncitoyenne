@@ -12,7 +12,7 @@
     {{-- SEO Meta Tags --}}
     <title>@yield('title', 'Réflexion Citoyenne | Plateforme citoyenne béninoise pour comprendre, analyser et agir')</title>
     <meta name="description" content="@yield('meta_description', 'Réflexion Citoyenne est une plateforme béninoise indépendante dédiée à l\'analyse, la formation civique, la participation citoyenne et la réflexion collective. Un espace pour les Béninois du pays et de la diaspora.')">
-    <meta name="keywords" content="@yield('meta_keywords', 'réflexion citoyenne, maison bénin citoyenne, éducation civique bénin, plateforme citoyenne bénin, citoyenneté béninoise, patriotisme béninois, think tank bénin, formation citoyenne bénin, participation citoyenne bénin, diaspora béninoise')">
+    <meta name="keywords" content="@yield('meta_keywords', 'réflexion citoyenne, maison bénin citoyenne, éducation civique bénin, plateforme citoyenne bénin, citoyenneté béninoise, patriotisme béninois, MBRC bénin, formation citoyenne bénin, participation citoyenne bénin, diaspora béninoise')">
     <meta name="author" content="Maison Béninoise de Réflexion Citoyenne - MBRC">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 

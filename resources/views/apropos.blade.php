@@ -5,12 +5,12 @@
 
 @section('meta_description', 'Découvrez la Maison Béninoise de Réflexion Citoyenne : histoire, mission, vision et valeurs du MBRC indépendant pour le développement et la participation citoyenne au Bénin.')
 
-@section('meta_keywords', 'à propos mbrc, histoire mbrc, mission citoyenne bénin, think tank béninois, valeurs patriotisme, vision citoyenne, maison béninoise réflexion, plateforme indépendante bénin')
+@section('meta_keywords', 'à propos mbrc, histoire mbrc, mission citoyenne bénin, MBRC béninois, valeurs patriotisme, vision citoyenne, maison béninoise réflexion, plateforme indépendante bénin')
 
 @section('canonical', route('apropos'))
 
 @section('og_title', 'À Propos de la MBRC | MBRC Béninois')
-@section('og_description', 'Découvrez l\'histoire et la mission de la Maison Béninoise de Réflexion Citoyenne, think tank indépendant pour la participation citoyenne au Bénin.')
+@section('og_description', 'Découvrez l\'histoire et la mission de la Maison Béninoise de Réflexion Citoyenne, MBRC indépendant pour la participation citoyenne au Bénin.')
 @section('og_image', asset('images/og-apropos.jpg'))
 
 {{-- Breadcrumb Schema --}}
@@ -48,9 +48,9 @@
                 <span aria-current="page">À propos</span>
             </nav>
 
-            <h1 class="page-title" itemprop="name">
+            <h3 class="page-title" itemprop="name">
                 À propos de la MBRC
-            </h1>
+            </h3>
 
             <p class="page-description" itemprop="description">
                 Découvrez l'histoire, la <strong>vision citoyenne</strong> et les <strong>valeurs</strong> qui animent la <strong>Maison Béninoise de Réflexion Citoyenne</strong>.
@@ -70,7 +70,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                     </svg>
                 </div>
-                <h2 class="content-title" itemprop="name">Notre <strong>Vision Citoyenne</strong></h2>
+                <h2 class="content-title" itemprop="name">Notre <strong>Vision </strong></h2>
                 <p class="content-text" itemprop="description">
                     La MBRC porte une <strong>vision</strong> simple et ambitieuse : bâtir une société béninoise plus éclairée, plus exigeante, plus patriote et plus unie, où chaque citoyen — quel que soit son âge, son statut ou son niveau d'instruction — a les moyens de comprendre les enjeux du pays et d'y contribuer avec lucidité à travers la <strong>participation citoyenne</strong>.
                 </p>
@@ -88,7 +88,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
                     </svg>
                 </div>
-                <h2 class="content-title" itemprop="name">Notre <strong>Mission</strong> de <strong>MBRC</strong></h2>
+                <h2 class="content-title" itemprop="name">Notre <strong>Mission</strong> </h2>
                 <p class="content-text" itemprop="description">
                     La <strong>Maison Béninoise de Réflexion Citoyenne</strong> (MBRC) poursuit une <strong>mission</strong> profonde et structurante : réarmer intellectuellement le citoyen béninois, renforcer son autonomie de pensée et bâtir un espace durable où la compréhension collective guide l'avenir du Bénin.
                 </p>
@@ -108,7 +108,7 @@
 <section class="section section-dark" itemscope itemtype="https://schema.org/CreativeWork">
     <div class="container">
         <div class="manifeste-content">
-            <button type="button"
+            {{-- <button type="button"
                 onclick="openManifesteModal()"
                 class="btn btn-primary"
                 style="margin-bottom: var(--space-lg);"
@@ -119,9 +119,42 @@
                         d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
                     </path>
                 </svg>
-            </button>
+            </button> --}}
+<button type="button"
+        onclick="openManifesteModal()"
+        class="btn btn-primary manifeste-pulse"
+        style="margin-bottom: var(--space-lg);"
+        aria-label="Télécharger le manifeste fondateur">
+    Manifeste Fondateur
+    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+        </path>
+    </svg>
+</button>
 
-            <h2 class="section-title light" itemprop="name">Sept principes qui guident notre <strong>MBRC</strong></h2>
+<style>
+@keyframes manifestePulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+.manifeste-pulse {
+    animation: manifestePulse 2s ease-in-out infinite;
+}
+
+.manifeste-pulse:hover {
+    animation: none;
+}
+</style>
+
+            <h2 class="section-title light" itemprop="name">Les principes qui guident  <strong>MBRC</strong></h2>
 
             <div class="manifeste-grid">
                 <article class="manifeste-item" itemprop="hasPart" itemscope itemtype="https://schema.org/CreativeWork">
@@ -189,7 +222,7 @@
     <div class="container">
         <div class="section-header">
             <span class="section-badge">Nos Valeurs</span>
-            <h2 class="section-title" itemprop="name">Les <strong>valeurs</strong> qui guident notre action de <strong>think tank béninois</strong></h2>
+            <h2 class="section-title" itemprop="name">Les <strong>valeurs</strong> qui guident nos actions</h2>
             <p class="section-description">
                 Les <strong>valeurs</strong> de la MBRC constituent le socle moral et intellectuel de notre engagement citoyen. Elles orientent nos actions, guident nos choix et définissent l'esprit dans lequel nous construisons cet espace de <strong>réflexion citoyenne</strong>.
             </p>
@@ -231,7 +264,7 @@
                 </div>
                 <h3 class="valeur-title" itemprop="name">L'Indépendance et la Neutralité</h3>
                 <p class="valeur-text">
-                    La MBRC est un <strong>think tank</strong> libre de contraintes politiques, de pressions partisanes, de toute tentative de récupération. Cette <strong>indépendance</strong> garantit la crédibilité de nos analyses.
+                    La MBRC est un <strong>MBRC</strong> libre de contraintes politiques, de pressions partisanes, de toute tentative de récupération. Cette <strong>indépendance</strong> garantit la crédibilité de nos analyses.
                 </p>
             </article>
 
@@ -308,7 +341,7 @@
     <div class="container">
         <div class="section-header">
             <span class="section-badge">Notre Histoire</span>
-            <h2 class="section-title" itemprop="headline">Une initiative de <strong>MBRC</strong> née d'un besoin</h2>
+            <h2 class="section-title" itemprop="headline">Une initiative citoyen née d’un besoin</h2>
         </div>
 
         <div style="max-width: 900px; margin: 0 auto;text-align: justify;" itemprop="articleBody">
@@ -359,7 +392,7 @@
     <div class="container">
         <div class="section-header">
             <span class="section-badge">Notre Équipe</span>
-            <h2 class="section-title">Les filles et fils du Bénin derrière le <strong>think tank</strong></h2>
+            <h2 class="section-title">Les filles et fils du Bénin engagés pour le bien commun</h2>
             <p class="section-description">
                 Citoyens béninois de tout horizon, unis par la même passion pour le Bénin et la <strong>participation citoyenne</strong>
             </p>
@@ -395,8 +428,8 @@
         </div>
 
         <div class="team-join">
-            <p>Vous souhaitez rejoindre l'équipe du <strong>think tank</strong> ?</p>
-            <a href="{{ route('rejoindre') }}" class="btn btn-primary" aria-label="Postuler pour rejoindre l'équipe MBRC">Postuler maintenant</a>
+            <p>Vous souhaitez rejoindre l'équipe du <strong>MBRC</strong> ?</p>
+            <a href="{{ route('rejoindre') }}" class="btn btn-primary" aria-label="Rejoindre pour rejoindre l'équipe MBRC">Rejoindre maintenant</a>
         </div>
     </div>
 </section>

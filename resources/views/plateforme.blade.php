@@ -5,7 +5,7 @@
 
 @section('meta_description', 'Découvrez la plateforme citoyenne MBRC : formations civiques gratuites, ateliers citoyens, débats apaisés et outils de participation pour comprendre et analyser les enjeux du Bénin.')
 
-@section('meta_keywords', 'plateforme citoyenne bénin, outils participation citoyenne, formation civique en ligne, ateliers citoyens bénin, débats citoyens, analyse politique bénin, think tank béninois, méthode réflexion citoyenne')
+@section('meta_keywords', 'plateforme citoyenne bénin, outils participation citoyenne, formation civique en ligne, ateliers citoyens bénin, débats citoyens, analyse politique bénin, MBRC béninois, méthode réflexion citoyenne')
 
 @section('canonical', route('plateforme'))
 
@@ -102,7 +102,11 @@
             <span class="section-badge">Méthode de Réflexion</span>
             <h2 class="section-title" itemprop="name">Notre démarche de <strong>réflexion citoyenne</strong> : 5 étapes pour la <strong>participation citoyenne</strong></h2>
             <p class="section-description" itemprop="description">
-                Une méthode exigeante, inspirée des grands <strong>think tanks</strong> internationaux, conçue pour permettre à chaque Béninois de comprendre les enjeux à travers l'<strong>éducation civique</strong> et l'<strong>analyse politique</strong>.
+                {{-- Une méthode exigeante, inspirée des grands <strong>MBRCs</strong> internationaux, conçue pour permettre à chaque Béninois de comprendre les enjeux à travers l'<strong>éducation civique</strong> et l'<strong>analyse politique</strong>. --}}
+Une méthode exigeante, conçue pour permettre à
+chaque Béninois de comprendre les enjeux de notre
+époque et d’anticiper ceux de demain grâce à
+l’éducation civique et à l’analyse citoyenne.
             </p>
         </div>
 

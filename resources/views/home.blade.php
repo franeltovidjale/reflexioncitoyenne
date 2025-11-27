@@ -5,7 +5,7 @@
 
 @section('meta_description', 'Réflexion Citoyenne est une plateforme béninoise indépendante dédiée à l\'analyse, la formation civique, la participation citoyenne et la réflexion collective. Un espace pour les Béninois du pays et de la diaspora.')
 
-@section('meta_keywords', 'réflexion citoyenne, maison bénin citoyenne, éducation civique bénin, analyse politique bénin, plateforme citoyenne bénin, citoyenneté béninoise, patriotisme béninois, think tank bénin, formation citoyenne bénin, participation citoyenne bénin, diaspora béninoise, gouvernance béninoise')
+@section('meta_keywords', 'réflexion citoyenne, maison bénin citoyenne, éducation civique bénin, analyse politique bénin, plateforme citoyenne bénin, citoyenneté béninoise, patriotisme béninois, MBRC bénin, formation citoyenne bénin, participation citoyenne bénin, diaspora béninoise, gouvernance béninoise')
 
 @section('canonical', route('home'))
 
@@ -37,9 +37,11 @@
         <div class="hero-content">
             {{-- H1 principal avec mots-clés --}}
             <h1 class="hero-title" itemprop="headline">
-                Réfléchir ensemble pour une <span class="gradient-text">citoyenneté béninoise éclairée</span><br>
-                Reconstruire un patriotisme fort et rendre au peuple béninois sa voix souveraine
+                Réfléchir ensemble. Comprendre ensemble. Agir ensemble.
+Pour reconstruire un <span class="gradient-text">patriotisme fort</span><br>
+                et rendre au peuple béninois sa voix souveraine.
             </h1>
+
 
             <p class="hero-description" itemprop="description">
                 Une <strong>plateforme citoyenne indépendante</strong> pour éclairer les enjeux d'aujourd'hui, former notre jeunesse à la <strong>participation citoyenne</strong>, et préparer le Bénin aux défis de demain à travers l'<strong>éducation civique</strong> et l'<strong>analyse politique</strong>.
@@ -93,10 +95,10 @@
     <div class="container">
         <div class="section-header">
             <span class="section-badge">Pourquoi la MBRC ?</span>
-            <h2 class="section-title" itemprop="headline">Un espace de réflexion citoyenne né d'un besoin de <strong>participation citoyenne</strong></h2>
+            <h2 class="section-title" itemprop="headline"> Un espace né de la volonté d’être acteurs,  <span >pas spectateurs</span></h2>
         </div>
 
-        <div style="max-width: 900px; margin: 0 auto;">
+        {{-- <div style="max-width: 900px; margin: 0 auto;">
             <div class="content-card" style="background: rgba(0, 140, 59, 0.03); border-color: var(--green-primary);" itemprop="articleBody">
                 <p class="content-text" style="font-size: 1.125rem; line-height: 1.8;">
                     De nombreux Béninois traversent aujourd'hui un sentiment d'inquiétude et d'incompréhension face aux réformes institutionnelles. La récente modification de la Constitution, réalisée sans véritable espace de <strong>consultation citoyenne</strong>, a laissé beaucoup de personnes avec un goût d'amertume : celui de voir des décisions importantes se prendre sans que la population ne soit réellement associée au débat démocratique.
@@ -108,7 +110,36 @@
                     C'est précisément dans ce besoin de clarté, de dialogue et de sérénité que s'inscrit la <strong>Maison Béninoise de Réflexion Citoyenne (MBRC)</strong> — un <strong>MBRC</strong> indépendant dédié à la compréhension des enjeux publics.
                 </p>
             </div>
-        </div>
+        </div> --}}
+<div style="max-width: 900px; margin: 0 auto;">
+    <div class="content-card" style="background: rgba(0, 140, 59, 0.03); border-color: var(--green-primary);" itemprop="articleBody">
+        <p class="content-text" style="font-size: 1.125rem; line-height: 1.8;">
+            De nombreux Béninois, au pays comme dans la <strong>diaspora béninoise</strong>, ressentent aujourd'hui une inquiétude profonde : les décisions publiques semblent se prendre sans véritable <strong>consultation citoyenne</strong>. La récente modification de la Constitution en est l'exemple le plus frappant. Beaucoup éprouvent une forme de tristesse et de distance, non par hostilité, mais parce qu'ils ont le sentiment que la vie publique s'éloigne peu à peu de la voix du peuple.
+        </p>
+        <p class="content-text" style="font-size: 1.125rem; line-height: 1.8;">
+            Dans ce climat de confusion et de désillusions, nombreux sont ceux qui préfèrent se taire — non par indifférence, mais faute d'un espace sûr, neutre et sérieux pour poser des questions, comprendre et échanger.
+        </p>
+        <p class="content-text" style="font-size: 1.125rem; line-height: 1.8;">
+            C'est pour répondre à ce besoin de clarté, de dialogue et de sérénité qu'est née la <strong>Maison Béninoise de Réflexion Citoyenne (MBRC)</strong>. La MBRC n'est ni un mouvement contestataire, ni un groupe de pression. C'est une maison d'idées, un lieu d'apaisement intellectuel où chacun peut s'informer, analyser, apprendre et renforcer son <strong>patriotisme béninois</strong>.
+        </p>
+        <p class="content-text" style="font-size: 1.125rem; line-height: 1.8;">
+            Un espace où la pensée retrouve sa place, où la <strong>citoyenneté béninoise</strong> retrouve sa dignité, et où défendre le Bénin signifie avant tout : le comprendre.
+        </p>
+        <p class="content-text" style="font-size: 1.125rem; line-height: 1.8; font-weight: 600; color: var(--gray-900);">
+            La MBRC s'adresse à celles et ceux qui :
+        </p>
+        <ul class="content-text" style="font-size: 1.125rem; line-height: 1.8; padding-left: 2rem;">
+            <li>aiment profondément le Bénin et pensent collectif ;</li>
+            <li>souhaitent comprendre avant de se positionner ;</li>
+            <li>recherchent un espace calme, loin des magouilles politiques;</li>
+            <li>veulent participer sans entrer dans la confrontation ;</li>
+            <li>désirent transmettre une culture citoyenne solide à la jeunesse.</li>
+        </ul>
+        <p class="content-text" style="font-size: 1.125rem; line-height: 1.8; font-weight: 600; color: var(--green-primary);">
+            La MBRC est un lieu où les idées ne divisent pas, mais éclairent. Un lieu où l'on peut réfléchir sans peur, sans parti pris, avec liberté d'esprit et patriotisme sincère. Un lieu pour celles et ceux qui croient qu'aimer le Bénin, c'est vouloir mieux le comprendre.
+        </p>
+    </div>
+</div>
     </div>
 </section>
 
@@ -119,7 +150,12 @@
             <span class="section-badge">Notre Mission Citoyenne</span>
             <h2 class="section-title" itemprop="name">Éclairer, Rassembler, Transmettre : Une mission d'<strong>éducation civique</strong> et de <strong>formation citoyenne</strong></h2>
             <p class="section-description" itemprop="description">
-                La MBRC n'est ni un parti ni une organisation militante. C'est une <strong>maison de réflexion citoyenne</strong>, un <strong>think tank béninois</strong> où l'analyse précède la réaction, où la connaissance précède le jugement.
+                {{-- La MBRC n'est ni un parti ni une organisation militante. C'est une <strong>maison de réflexion citoyenne</strong>, un <strong>MBRC béninois</strong> où l'analyse précède la réaction, où la connaissance précède le jugement. --}}
+La MBRC n'est ni un mouvement, ni un parti
+politique, ni une organisation militante. C'est
+une maison de réflexion citoyenne, un espace
+où l’analyse précède la réaction et où la
+connaissance guide le jugement
             </p>
         </div>
 

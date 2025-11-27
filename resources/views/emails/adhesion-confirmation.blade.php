@@ -39,33 +39,63 @@
                                 Nous vous souhaitons la bienvenue au sein de notre communauté.
                             </p>
 
-                            <!-- Telegram Channels -->
-                            <div style="background-color: #f9f9f9; padding: 20px; margin: 25px 0; border-left: 4px solid #008C3B;">
+                            <!-- Telegram Section -->
+                            <div style="background-color: #f9f9f9; padding: 20px; margin: 25px 0; border-left: 4px solid #0088cc;">
                                 <p style="margin: 0 0 15px 0; color: #333333; font-size: 16px; font-weight: bold;">
-                                    Rejoignez nos espaces officiels :
+                                    📱 Rejoignez-nous sur Telegram :
                                 </p>
 
                                 <p style="margin: 0 0 10px 0;">
-                                    <a href="https://t.me/reflexioncitoyenneBJ" style="color: #008C3B; text-decoration: none; font-size: 15px;">
-                                        Canal officiel MBRC
+                                    <a href="https://t.me/reflexioncitoyenneBJ" style="color: #0088cc; text-decoration: none; font-size: 15px;">
+                                        📢 Canal officiel MBRC
                                     </a>
                                 </p>
 
                                 <p style="margin: 0 0 10px 0;">
-                                    <a href="https://t.me/communautepatriotesBJ" style="color: #008C3B; text-decoration: none; font-size: 15px;">
-                                        Communauté des Patriotes
+                                    <a href="https://t.me/communautepatriotesBJ" style="color: #0088cc; text-decoration: none; font-size: 15px;">
+                                        🇧🇯 Communauté des Patriotes
                                     </a>
                                 </p>
 
                                 <p style="margin: 0 0 10px 0;">
-                                    <a href="https://t.me/jeunesseleadershipBJ" style="color: #008C3B; text-decoration: none; font-size: 15px;">
-                                        Jeunesse et Leadership
+                                    <a href="https://t.me/jeunesseleadershipBJ" style="color: #0088cc; text-decoration: none; font-size: 15px;">
+                                        🎓 Jeunesse et Leadership
                                     </a>
                                 </p>
 
                                 <p style="margin: 0;">
-                                    <a href="https://t.me/mbrcDiasporaBJ" style="color: #008C3B; text-decoration: none; font-size: 15px;">
-                                        Diaspora Béninoise
+                                    <a href="https://t.me/mbrcDiasporaBJ" style="color: #0088cc; text-decoration: none; font-size: 15px;">
+                                        🌍 Diaspora Béninoise
+                                    </a>
+                                </p>
+                            </div>
+
+                            <!-- WhatsApp Section -->
+                            <div style="background-color: #f9f9f9; padding: 20px; margin: 25px 0; border-left: 4px solid #25D366;">
+                                <p style="margin: 0 0 15px 0; color: #333333; font-size: 16px; font-weight: bold;">
+                                    💬 Rejoignez-nous sur WhatsApp :
+                                </p>
+
+                                <p style="margin: 0 0 10px 0;">
+                                    <a href="https://whatsapp.com/channel/0029VbBmFXHC6ZveybXHko0V" style="color: #25D366; text-decoration: none; font-size: 15px;">
+                                        📢 Chaîne Officielle MBRC
+                                    </a>
+                                </p>
+
+                                <p style="margin: 0 0 10px 0;">
+                                    <a href="https://chat.whatsapp.com/HQlC6Kc1p6278KwT6wgONc?mode=hqrt1" style="color: #25D366; text-decoration: none; font-size: 15px;">
+                                        👥 Diaspora Béninoise
+                                    </a>
+                                </p>
+                                    <p style="margin: 0 0 10px 0;">
+                                    <a href="https://chat.whatsapp.com/DChkJYoVdZgB4hiScJsuqw?mode=hqrt1" style="color: #25D366; text-decoration: none; font-size: 15px;">
+                                        👥 Jeunesse & leadership
+                                    </a>
+                                </p>
+
+                                <p style="margin: 0;">
+                                    <a href="https://chat.whatsapp.com/JAQlLynKjRIA4uAf4uY2zS?mode=hqrt1" style="color: #25D366; text-decoration: none; font-size: 15px;">
+                                        👥 Communauté des patriotes
                                     </a>
                                 </p>
                             </div>
